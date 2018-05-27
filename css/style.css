@@ -33,8 +33,14 @@ div.cercle-interne{
   border-radius: 50%;
   margin: auto;
 }
-div.n3{
-  margin: 0 auto;
-  margin-top: -12px;
+
+div.n1{
+  margin-left: 9%;
+  margin-bottom: 15%;
 }
+div.n2{
+  margin-left: -91%;
+  margin-bottom: 80%;
+}
+
 /* les pré requis fin*/
