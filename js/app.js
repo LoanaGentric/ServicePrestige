@@ -5,20 +5,64 @@ let carName = ["Tesla X", "Tesla S", "Mercedes Classe E", "Mercedes Classe S", "
 let i = 0
 
     setInterval(function(){
-      if (i == 0) {
-        document.querySelector('.left').src=carImage[10];
-      }
-      else {
-        document.querySelector('.left').src=carImage[i-1];
-      }
-      document.querySelector('.center').src=carImage[i];
-      document.getElementById('nomVoiture').innerHTML=carName[i];
+      console.log('intervale')
+      mouvement(i)
+      i += 1
       if (i == 10) {
-        document.querySelector('.right').src=carImage[0];
+        i = 0
       }
-      else {
-        document.querySelector('.right').src=carImage[i+1];
-      }
-      i++;
-      if(i==11) i=0;
-    },4000)
+      console.log(i)
+    },26000)
+
+
+//intervalID = window.setInterval(mouvement(i),1000)
+
+// function de mouvement
+
+function mouvement(i){
+  if (i == 0) {
+    document.querySelector('.left').src=carImage[10];
+  }
+  else {
+    document.querySelector('.left').src=carImage[i-1];
+  }
+  document.querySelector('.center').src=carImage[i];
+  document.getElementById('nomVoiture').innerHTML=carName[i];
+  if (i == 10) {
+    document.querySelector('.right').src=carImage[0];
+  }
+  else {
+    document.querySelector('.right').src=carImage[i+1];
+  }
+  console.log(i)
+}
+
+//
+// action des flèches
+
+document.querySelector('#fleche').addEventListener('click',
+function(){
+  console.log('a gauche')
+  i = i - 1
+  mouvement(i)
+  if (i == 11) {
+    i = 0
+  }
+  if (i <= 0) {
+    i = 11
+  }
+  console.log(i)
+
+})
+
+document.querySelector('#fleche2').addEventListener('click',
+function(){
+  console.log('a droite')
+  i = i + 1
+  mouvement(i)
+  if (i == 10) {
+    i = 0
+  }
+  console.log(i)
+
+})
