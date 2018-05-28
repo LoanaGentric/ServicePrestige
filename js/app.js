@@ -59,10 +59,11 @@ document.querySelector('#fleche2').addEventListener('click',
 function(){
   console.log('a droite')
   i = i + 1
-  mouvement(i)
-  if (i == 10) {
+  if (i == 11) {
     i = 0
   }
+  mouvement(i)
+
   console.log(i)
 
 })
