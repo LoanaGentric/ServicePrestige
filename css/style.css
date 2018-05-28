@@ -30,7 +30,62 @@ body{
   background-size:auto 800px;
 }
 
+.contentPage1{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5%;
+  padding-right: 20%;
+}
+
+h1{
+  text-align: center;
+  padding-top: 50px;
+  text-transform: uppercase;
+  padding-top: 100px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bigLosange{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  width: 220px;
+
+  background: white;
+  border:2px solid black;
+  opacity: 0.8;
+
+  -ms-transform: rotate(45deg); /* Internet Explorer */
+  -moz-transform: rotate(45deg); /* Firefox */
+  -webkit-transform: rotate(45deg); /* Safari et Chrome */
+  -o-transform: rotate(45deg); /* Opera */
+}
+
+.losange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    background: white;
+    border:1px solid black;
+}
+
+.losange h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  color: #000;
+  -ms-transform: rotate(-45deg); /* Internet Explorer */
+  -moz-transform: rotate(-45deg); /* Firefox */
+  -webkit-transform: rotate(-45deg); /* Safari et Chrome */
+  -o-transform: rotate(-45deg); /* Opera */
+}
+
+
 header{
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,9 +147,69 @@ header img{
   font-family: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 375px){
+@media screen and (max-width: 1100px) and (min-width: 375px){
   .page1{
     height: 768px;
   }
-  
+
+  .contentPage1{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-right: 0;
+  }
+
+  header{
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 40%;
+    height: 768px;
+    background:#ffffff;
+  }
+
+  header nav.left{
+    display: flex;
+    flex-direction: column;
+
+    top:0;
+    left:0;
+
+    order: 1;
+  }
+
+  header nav ul:hover{
+    text-decoration: underline;
+  }
+
+  header nav.right{
+    display: flex;
+    flex-direction: column;
+
+    top:0;
+    left:0;
+
+    order: 2;
+  }
+
+  header nav ul{
+    margin: 0;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  header img{
+    height: 70px;
+    text-align: center;
+    order: 0;
+  }
+
 }
