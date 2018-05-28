@@ -1,5 +1,5 @@
 body{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .container{
@@ -90,4 +90,11 @@ header img{
 .page2 p, h2 {
   color: white;
   font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 375px){
+  .page1{
+    height: 768px;
+  }
+  
 }
